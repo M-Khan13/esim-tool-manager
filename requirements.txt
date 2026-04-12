@@ -1,0 +1,7 @@
+# eSim Automated Tool Manager v2.0
+#
+# Core: ZERO external dependencies – Python 3.8+ standard library only
+#   os, sys, json, subprocess, platform, datetime, pathlib, re, shutil, socket
+#
+# Testing (optional):
+pytest>=7.0

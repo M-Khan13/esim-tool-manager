@@ -1,0 +1,182 @@
+{
+  "tools": {
+    "ngspice": {
+      "name": "Ngspice",
+      "description": "Open-source SPICE simulator for circuit simulation",
+      "versions": ["40", "41", "42"],
+      "linux": {
+        "url": "https://sourceforge.net/projects/ngspice/files/",
+        "installer": "ngspice",
+        "install_cmd": "sudo apt-get install -y ngspice"
+      },
+      "darwin": {
+        "url": "https://sourceforge.net/projects/ngspice/files/",
+        "installer": "ngspice",
+        "install_cmd": "brew install ngspice"
+      },
+      "windows": {
+        "url": "https://sourceforge.net/projects/ngspice/files/",
+        "installer": "ngspice-42-64bit.exe",
+        "install_cmd": "ngspice-42-64bit.exe /S /D=C:\\Program Files\\ngspice"
+      },
+      "dependencies": ["build-essential", "libgomp1", "libfftw3-dev"]
+    },
+    "kicad": {
+      "name": "KiCad",
+      "description": "Open-source EDA software for circuit design and PCB layout",
+      "versions": ["8.0", "9.0"],
+      "linux": {
+        "url": "https://kicad.org/download/linux/",
+        "installer": "kicad",
+        "install_cmd": "sudo apt-get install -y kicad"
+      },
+      "darwin": {
+        "url": "https://kicad.org/download/macos/",
+        "installer": "kicad",
+        "install_cmd": "brew install --cask kicad"
+      },
+      "windows": {
+        "url": "https://kicad.org/download/windows/",
+        "installer": "kicad-9.0.0-x86_64.exe",
+        "install_cmd": "kicad-9.0.0-x86_64.exe /S"
+      },
+      "dependencies": ["python3", "wxpython", "boost"]
+    },
+    "python3": {
+      "name": "Python 3",
+      "description": "Python programming language and runtime",
+      "versions": ["3.9", "3.10", "3.11", "3.12"],
+      "linux": {
+        "url": "https://www.python.org/downloads/",
+        "installer": "python3",
+        "install_cmd": "sudo apt-get install -y python3 python3-pip python3-dev"
+      },
+      "darwin": {
+        "url": "https://www.python.org/downloads/",
+        "installer": "python@3",
+        "install_cmd": "brew install python@3"
+      },
+      "windows": {
+        "url": "https://www.python.org/downloads/",
+        "installer": "python-3.12.0-amd64.exe",
+        "install_cmd": "python-3.12.0-amd64.exe /quiet InstallAllUsers=1"
+      },
+      "dependencies": []
+    },
+    "git": {
+      "name": "Git",
+      "description": "Distributed version control system",
+      "versions": ["2.42", "2.43", "2.44"],
+      "linux": {
+        "url": "https://git-scm.com/download/linux",
+        "installer": "git",
+        "install_cmd": "sudo apt-get install -y git"
+      },
+      "darwin": {
+        "url": "https://git-scm.com/download/mac",
+        "installer": "git",
+        "install_cmd": "brew install git"
+      },
+      "windows": {
+        "url": "https://git-scm.com/download/win",
+        "installer": "Git-2.44.0-64-bit.exe",
+        "install_cmd": "Git-2.44.0-64-bit.exe /SILENT /NORESTART"
+      },
+      "dependencies": []
+    },
+    "gcc": {
+      "name": "GCC",
+      "description": "GNU Compiler Collection for C/C++ compilation",
+      "versions": ["12", "13", "14"],
+      "linux": {
+        "url": "https://gcc.gnu.org/",
+        "installer": "build-essential",
+        "install_cmd": "sudo apt-get install -y build-essential"
+      },
+      "darwin": {
+        "url": "https://gcc.gnu.org/",
+        "installer": "gcc",
+        "install_cmd": "brew install gcc"
+      },
+      "windows": {
+        "url": "https://sourceforge.net/projects/mingw-w64/files/",
+        "installer": "mingw-w64-installer.exe",
+        "install_cmd": "mingw-w64-installer.exe /SILENT"
+      },
+      "dependencies": []
+    },
+    "make": {
+      "name": "Make",
+      "description": "Build automation tool",
+      "versions": ["4.3", "4.4"],
+      "linux": {
+        "url": "https://www.gnu.org/software/make/",
+        "installer": "make",
+        "install_cmd": "sudo apt-get install -y make"
+      },
+      "darwin": {
+        "url": "https://www.gnu.org/software/make/",
+        "installer": "make",
+        "install_cmd": "brew install make"
+      },
+      "windows": {
+        "url": "https://gnuwin32.sourceforge.io/packages/make.htm",
+        "installer": "make-3.81.exe",
+        "install_cmd": "make-3.81.exe /SILENT"
+      },
+      "dependencies": ["gcc"]
+    }
+  },
+  "dependencies": {
+    "build-essential": {
+      "linux": "build-essential",
+      "darwin": "Developer Command Line Tools (xcode-select --install)",
+      "windows": "Visual Studio Build Tools",
+      "description": "Essential tools for building software"
+    },
+    "libgomp1": {
+      "linux": "libgomp1",
+      "darwin": "libomp (brew install libomp)",
+      "windows": "MSVC Runtime",
+      "description": "GNU OpenMP runtime library"
+    },
+    "libfftw3-dev": {
+      "linux": "libfftw3-dev",
+      "darwin": "fftw (brew install fftw)",
+      "windows": "FFTW",
+      "description": "Fast Fourier Transform library"
+    },
+    "python3": {
+      "linux": "python3",
+      "darwin": "python@3 (brew install python@3)",
+      "windows": "Python Runtime",
+      "description": "Python 3 interpreter"
+    },
+    "wxpython": {
+      "linux": "python3-wxgtk4.0",
+      "darwin": "wxpython (pip install wxPython)",
+      "windows": "wxPython",
+      "description": "wxWidgets Python bindings for GUI"
+    },
+    "boost": {
+      "linux": "libboost-all-dev",
+      "darwin": "boost (brew install boost)",
+      "windows": "Boost",
+      "description": "C++ library collection"
+    }
+  },
+  "environment_variables": {
+    "NGSPICE_HOME": "/usr/local/ngspice",
+    "KICAD_HOME": "/usr/share/kicad",
+    "KICAD_PLUGINS": "${HOME}/.kicad_plugins",
+    "LD_LIBRARY_PATH": "/usr/local/lib:$LD_LIBRARY_PATH",
+    "PATH": "$PATH:/usr/local/ngspice/bin"
+  },
+  "metadata": {
+    "version": "2.0",
+    "last_updated": "2026-04-05",
+    "maintainer": "eSim Team",
+    "supported_platforms": ["Linux", "Windows", "macOS"],
+    "description": "eSim Tool Registry – Definitions for all eSim-related tools and dependencies"
+  }
+}
