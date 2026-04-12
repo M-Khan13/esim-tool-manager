@@ -384,6 +384,4 @@ esim-tool-manager/
 
 ---
 
-<p align="center">
-  <em>Built for the <a href="https://esim.fossee.in/">eSim</a> Summer Fellowship 2026 – Screening Task 5</em>
-</p>
+
