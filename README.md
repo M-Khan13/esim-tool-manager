@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://esim.fossee.in/sites/default/esim_logo.png" alt="eSim Logo" width="100"/>
-</p>
+
 
 <h1 align="center">eSim Automated Tool Manager</h1>
 
